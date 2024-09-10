@@ -251,13 +251,6 @@
     <dependencies>
         <dependency>
             <groupId>io.github.orionlibs</groupId>
-            <artifactId>orion-assert</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>io.github.orionlibs</groupId>
             <artifactId>orion-string</artifactId>
             <version>1.0.3</version>
         </dependency>
