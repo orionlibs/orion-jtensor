@@ -22,4 +22,18 @@ public class TensorRank2Test extends ATest
         System.out.println(tensorAsString);
         assertEquals("[[42, 0][0, 7]]", tensorAsString);
     }
+
+
+    @Test
+    void test_tensorCreation_2x2b()
+    {
+        TensorRank2<Integer> tensor = new TensorRank2<>(Integer.class, 2, 2);
+        tensor.set(42, 0, 0);
+        tensor.set(7, 1, 1);
+        assertEquals(42, tensor.get(0, 0));
+        assertEquals(7, tensor.get(1, 1));
+        String tensorAsString = tensor.print();
+        System.out.println(tensorAsString);
+        assertEquals("[[42, 0][0, 7]]", tensorAsString);
+    }
 }

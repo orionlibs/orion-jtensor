@@ -21,4 +21,17 @@ public class TensorRank1Test extends ATest
         System.out.println(tensorAsString);
         assertEquals("[42, 0]", tensorAsString);
     }
+
+
+    @Test
+    void test_tensorCreation_2b()
+    {
+        TensorRank1<Integer> tensor = new TensorRank1<>(Integer.class, 2);
+        tensor.set(42, 0);
+        assertEquals(42, tensor.get(0));
+        assertEquals(0, tensor.get(1));
+        String tensorAsString = tensor.print();
+        System.out.println(tensorAsString);
+        assertEquals("[42, 0]", tensorAsString);
+    }
 }
