@@ -16,7 +16,7 @@ public abstract class ATensor<T>
     {
         Assert.isTrue(dimensions == null || dimensions.length >= 0, "A tensor must have non-negative dimension");
         this.dataTypeName = dataType.getName();
-        if(dimensions == null || dimensions.length == 1)
+        if(dimensions == null || dimensions.length == 0)
         {
             this.dimensions = new int[0];
         }
@@ -62,7 +62,7 @@ public abstract class ATensor<T>
 
 
     // Print the tensor for demonstration purposes (recursive method)
-    public String printTensor()
+    public String print()
     {
         this.tensorAsString = new StringBuilder();
         printRecursive(data, 0);
@@ -80,21 +80,22 @@ public abstract class ATensor<T>
         {
             if(current instanceof Object[])
             {
-                tensorAsString.append(STR."\{"[".repeat(depthToBeginWith)}[");
+                int numberOfTimesToRepeatBrackets = Math.max(0, depthToBeginWith - 1);
+                tensorAsString.append(STR."\{"[".repeat(numberOfTimesToRepeatBrackets)}[");
                 Object[] currentArray = (Object[])current;
                 for(int i = 0; i < currentArray.length; i++)
                 {
                     printRecursive(currentArray[i], depthToBeginWith + 1);
                     if(i == currentArray.length - 1)
                     {
-                        tensorAsString = StringsService.deleteCharacterFromTheEnd(tensorAsString, " ");
+                        tensorAsString = StringsService.deleteCharacterFromTheEnd(tensorAsString, ", ");
                     }
                 }
-                tensorAsString.append(STR."\{"]".repeat(depthToBeginWith)}]");
+                tensorAsString.append(STR."\{"]".repeat(numberOfTimesToRepeatBrackets)}]");
             }
             else
             {
-                tensorAsString.append(STR."\{current} ");
+                tensorAsString.append(STR."\{current}, ");
             }
         }
     }
