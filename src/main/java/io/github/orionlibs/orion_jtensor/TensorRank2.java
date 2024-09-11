@@ -55,6 +55,18 @@ public class TensorRank2<T> extends ATensor
                 {
                     values[i] = BigInteger.ZERO;
                 }
+                else if(dataTypeName.equals(ComplexFloat.class.getName()))
+                {
+                    values[i] = ComplexFloat.of();
+                }
+                else if(dataTypeName.equals(ComplexDouble.class.getName()))
+                {
+                    values[i] = ComplexDouble.of();
+                }
+                else if(dataTypeName.equals(ComplexBigDecimal.class.getName()))
+                {
+                    values[i] = ComplexBigDecimal.of();
+                }
                 else
                 {
                     values[i] = 0.0f;

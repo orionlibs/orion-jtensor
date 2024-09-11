@@ -50,6 +50,18 @@ public class TensorRank0<T> extends ATensor
         {
             return BigInteger.ZERO;
         }
+        else if(dataTypeName.equals(ComplexFloat.class.getName()))
+        {
+            return ComplexFloat.of();
+        }
+        else if(dataTypeName.equals(ComplexDouble.class.getName()))
+        {
+            return ComplexDouble.of();
+        }
+        else if(dataTypeName.equals(ComplexBigDecimal.class.getName()))
+        {
+            return ComplexBigDecimal.of();
+        }
         else
         {
             return 0.0f;

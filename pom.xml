@@ -257,6 +257,13 @@
 
 
         <dependency>
+            <groupId>io.github.orionlibs</groupId>
+            <artifactId>orion-object</artifactId>
+            <version>1.0.3</version>
+        </dependency>
+
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.32</version>
