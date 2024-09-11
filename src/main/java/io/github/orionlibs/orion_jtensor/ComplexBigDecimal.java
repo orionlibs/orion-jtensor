@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 
 public class ComplexBigDecimal implements Cloneable
 {
+    public static final ComplexBigDecimal ZERO = ComplexBigDecimal.of();
     private BigDecimal realValue = BigDecimal.ZERO;
     private BigDecimal imaginaryValue = BigDecimal.ZERO;
 
@@ -54,6 +55,41 @@ public class ComplexBigDecimal implements Cloneable
     public BigDecimal getImaginaryValue()
     {
         return imaginaryValue;
+    }
+
+
+    @Override
+    public boolean equals(Object other)
+    {
+        if(other instanceof ComplexBigDecimal temp)
+        {
+            return this.realValue.equals(temp.getRealValue()) && this.imaginaryValue.equals(temp.getImaginaryValue());
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+
+    @Override
+    public String toString()
+    {
+        if(realValue == null || imaginaryValue == null)
+        {
+            return "NaN";
+        }
+        else
+        {
+            if(imaginaryValue.compareTo(BigDecimal.ZERO) < 0)
+            {
+                return STR."\{realValue.toPlainString()} - \{imaginaryValue.negate().toPlainString()}i";
+            }
+            else
+            {
+                return STR."\{realValue.toPlainString()} + \{imaginaryValue.toPlainString()}i";
+            }
+        }
     }
 
 

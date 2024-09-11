@@ -6,7 +6,7 @@ import java.math.BigInteger;
 
 public class TensorRank0<T> extends ATensor
 {
-    private Object data;
+    protected Object data;
 
 
     public TensorRank0(Class<?> dataType)
@@ -16,9 +16,20 @@ public class TensorRank0<T> extends ATensor
     }
 
 
+    public TensorRank0(Class<?> dataType, T data)
+    {
+        super(dataType);
+        this.data = data;
+    }
+
+
     private Object createZeroValuedTensor()
     {
-        if(dataTypeName.equals(Long.class.getName()))
+        if(dataTypeName.equals(Boolean.class.getName()))
+        {
+            return Boolean.FALSE;
+        }
+        else if(dataTypeName.equals(Long.class.getName()))
         {
             return 0L;
         }

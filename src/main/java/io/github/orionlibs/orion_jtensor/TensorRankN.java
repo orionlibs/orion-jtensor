@@ -22,7 +22,11 @@ public class TensorRankN<T> extends ATensor
             Object[] values = new Object[size];
             for(int i = 0; i < values.length; i++)
             {
-                if(dataTypeName.equals(Long.class.getName()))
+                if(dataTypeName.equals(Boolean.class.getName()))
+                {
+                    values[i] = Boolean.FALSE;
+                }
+                else if(dataTypeName.equals(Long.class.getName()))
                 {
                     values[i] = 0L;
                 }
