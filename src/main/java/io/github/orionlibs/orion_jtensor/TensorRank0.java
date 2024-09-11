@@ -1,6 +1,9 @@
 package io.github.orionlibs.orion_jtensor;
 
 import io.github.orionlibs.orion_assert.Assert;
+import io.github.orionlibs.orion_jtensor.complex.ComplexBigDecimal;
+import io.github.orionlibs.orion_jtensor.complex.ComplexDouble;
+import io.github.orionlibs.orion_jtensor.complex.ComplexFloat;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 

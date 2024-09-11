@@ -1,5 +1,18 @@
 package io.github.orionlibs.orion_jtensor;
 
+import io.github.orionlibs.orion_jtensor.rank0.BigDecimalTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.BigIntegerTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.BooleanTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ByteTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ComplexBigDecimalTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ComplexDoubleTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ComplexFloatTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.DoubleTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.FloatTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.IntegerTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.LongTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ShortTensorRank0;
+
 public class JTensor
 {
     private JTensor()

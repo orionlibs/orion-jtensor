@@ -1,4 +1,4 @@
-package io.github.orionlibs.orion_jtensor;
+package io.github.orionlibs.orion_jtensor.complex;
 
 import io.github.orionlibs.orion_object.CloningService;
 import java.math.BigDecimal;

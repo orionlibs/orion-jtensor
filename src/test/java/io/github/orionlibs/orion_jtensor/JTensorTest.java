@@ -2,6 +2,21 @@ package io.github.orionlibs.orion_jtensor;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import io.github.orionlibs.orion_jtensor.complex.ComplexBigDecimal;
+import io.github.orionlibs.orion_jtensor.complex.ComplexDouble;
+import io.github.orionlibs.orion_jtensor.complex.ComplexFloat;
+import io.github.orionlibs.orion_jtensor.rank0.BigDecimalTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.BigIntegerTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.BooleanTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ByteTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ComplexBigDecimalTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ComplexDoubleTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ComplexFloatTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.DoubleTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.FloatTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.IntegerTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.LongTensorRank0;
+import io.github.orionlibs.orion_jtensor.rank0.ShortTensorRank0;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import org.junit.jupiter.api.Test;
